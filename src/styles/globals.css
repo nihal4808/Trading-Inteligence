@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    @apply border-neutral-700;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-neutral-950 text-neutral-50;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  input,
+  textarea {
+    @apply bg-neutral-900 text-neutral-50 placeholder-neutral-500;
+  }
+
+  input:focus,
+  textarea:focus {
+    @apply outline-none ring-2 ring-blue-500;
+  }
+
+  code {
+    @apply font-mono text-sm;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-lg border border-neutral-700 bg-neutral-900 p-6 shadow-lg;
+  }
+
+  .card-sm {
+    @apply rounded-lg border border-neutral-700 bg-neutral-900 p-4 shadow-lg;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg font-medium transition-colors;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg font-medium transition-colors bg-blue-600 hover:bg-blue-700 text-white;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg font-medium transition-colors bg-neutral-800 hover:bg-neutral-700 text-neutral-200;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center rounded-lg font-medium transition-colors bg-red-600 hover:bg-red-700 text-white;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium;
+  }
+
+  .badge-success {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-green-900/30 text-green-400;
+  }
+
+  .badge-warning {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-yellow-900/30 text-yellow-400;
+  }
+
+  .badge-danger {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-red-900/30 text-red-400;
+  }
+
+  .badge-info {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-blue-900/30 text-blue-400;
+  }
+
+  .input-field {
+    @apply w-full rounded-lg border border-neutral-700 bg-neutral-900 px-4 py-2 text-neutral-50 placeholder-neutral-500 transition-colors focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold text-neutral-50;
+  }
+
+  .subsection-title {
+    @apply text-lg font-semibold text-neutral-200;
+  }
+
+  .text-muted {
+    @apply text-neutral-400;
+  }
+
+  .text-subtle {
+    @apply text-neutral-500;
+  }
+}
